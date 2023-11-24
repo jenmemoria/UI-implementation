@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1.html</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin: 50px auto;
+            font-size: 12px
+        }
+        td, th{
+            padding: 10px;
+            border: 1px solid #dadada;
+        }
+        th{
+            background-color: #f5f7f9;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table border="1" cellpadding="5" cellspacing="0" align="center">
+            <tr>
+                <th rowspan="3">DBMS 설치하기</th>
+            </tr>
+            <tr>
+                <td><font color="red">[문항1]</font> 파일 시스템과 DBMS의 차이 및 장단점을 아는가 (배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="1good" checked>매우 우수하다</label> <!--checked를 하면 이미 선택되어져 있음.-->
+                    <label><input type="radio" name="1good">우수하다</label>
+                    <label><input type="radio" name="1good">보통이다</label>
+                    <label><input type="radio" name="1good">미흡하다</label>
+                    <label><input type="radio" name="1good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">데이터베이스 오브젝트 생성하기</th>
+            </tr>
+            <tr>
+                <td>[문항2] DBMS 사용자 계정의 패스워드 설정 방법을 아는가 (배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="2good">매우 우수하다</label>
+                    <label><input type="radio" name="2good">우수하다</label>
+                    <label><input type="radio" name="2good">보통이다</label>
+                    <label><input type="radio" name="2good">미흡하다</label>
+                    <label><input type="radio" name="2good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">기본 SQL 작성하기</th>
+            </tr>
+            <tr>
+                <td>[문항3] DDL DML 구분하여 알고 있는가 (배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="3good">매우 우수하다</label>
+                    <label><input type="radio" name="3good">우수하다</label>
+                    <label><input type="radio" name="3good">보통이다</label>
+                    <label><input type="radio" name="3good">미흡하다</label>
+                    <label><input type="radio" name="3good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">DBMS 설치하기</th>
+            </tr>
+            <tr>
+                <td>[문항4] 제약조건을 적용하여 테이블을 생성할 수 있는가?(배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="4good">매우 우수하다</label>
+                    <label><input type="radio" name="4good">우수하다</label>
+                    <label><input type="radio" name="4good">보통이다</label>
+                    <label><input type="radio" name="4good">미흡하다</label>
+                    <label><input type="radio" name="4good">매우 미흡하다</label></td>
+
+            </tr>
+            
+            <tr>
+                <th rowspan="3">고급 작성하기</th>
+            </tr>
+            <tr>
+                <td>[문항5] 시퀀스 및 인덱스를 알고 활용할 수 있는가 (배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="5good">매우 우수하다</label>
+                    <label><input type="radio" name="5good">우수하다</label>
+                    <label><input type="radio" name="5good">보통이다</label>
+                    <label><input type="radio" name="5good">미흡하다</label>
+                    <label><input type="radio" name="5good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">절차형 SQL 작성하기</td>
+            </tr>
+            <tr>
+                <td>[문항6] 오라클 제약조건의 종류와 특징을 알고 있는가(배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="6good">매우 우수하다</label>
+                    <label><input type="radio" name="6good">우수하다</label>
+                    <label><input type="radio" name="6good">보통이다</label>
+                    <label><input type="radio" name="6good">미흡하다</label>
+                    <label><input type="radio" name="6good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">응용 SQL 작성하기</th>
+            </tr>
+            <tr>
+                <td>[문항7] 자바에서 JDBC를 이용하여 DB에 접속할 수 있는가(배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="7good">매우 우수하다</label>
+                    <label><input type="radio" name="7good">우수하다</label>
+                    <label><input type="radio" name="7good">보통이다</label>
+                    <label><input type="radio" name="7good">미흡하다</label>
+                    <label><input type="radio" name="7good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">고급 작성하기</th>
+            </tr>
+            <tr>
+                <td>[문항8] 날짜 형태로 자료를 처리할 수 있는가(배점10)(배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="8good">매우 우수하다</label>
+                    <label><input type="radio" name="8good">우수하다</label>
+                    <label><input type="radio" name="8good">보통이다</label>
+                    <label><input type="radio" name="8good">미흡하다</label>
+                    <label><input type="radio" name="8good">매우 미흡하다</label></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3">고급 작성하기</th>
+            </tr>
+            <tr>
+                <td>[문항9] 문제상황을 인식하고 해결할 수 있는가(배점10)</td>
+            </tr>
+            <tr>
+                <td>훈련교사 : 
+                    <label><input type="radio" name="9good">매우 우수하다</label>
+                    <label><input type="radio" name="9good">우수하다</label>
+                    <label><input type="radio" name="9good">보통이다</label>
+                    <label><input type="radio" name="9good">미흡하다</label>
+                    <label><input type="radio" name="9good">매우 미흡하다</label></td>
+
+            </tr>
+            <th rowspan="2">평가 근거자료1</th>
+            <tr>
+                <td align="center"><a href="#">왕제은.zip</a></td>
+            </tr>
+            <tr>
+                <th>평가 근거자료 첨부1</th>
+                <td>
+                    <p><input type="file"></p>
+                    <input type="checkbox">삭제(파일명:왕제은2A.zip)
+                </td>
+            </tr>
+            <tr>
+                <th>교수자 총평</th>
+                <td>
+                    <textarea style="resize: none;" cols="70" rows="5"></textarea>
+                </td>
+            </tr>
+
+        </table>
+
+        <!--원래 여기다가 style 쓰면 안되는데 보라고 적어놓음.-->
+        <style>
+            button{
+                border: 0;
+                background-color: #00acac;
+                color: white;
+                font-weight: bold;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 10px 20px
+            }
+        </style>
+
+        <p align="center">
+            <button>←</button>
+            <button>→</button>
+        </p>
+
+        <p align="center">
+            <input type="submit" value="채점하기">
+        </p>
+    </form> <!--form 태그로 table을 안 묶어주면 제출하기가 안 됨.-->
+</body>
+</html>
