@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03.html</title>
+    <style>
+        div.box{
+            display: flex; /*나는 세로로 정렬하고 싶엉 ~~~*/
+            flex-flow: wrap;
+            border: 2px solid black;
+            width: 900px;
+            margin: auto;
+        }
+        div.item {
+            width: 150px;
+            height: 150px;
+            border: 1px solid grey;
+            text-align: center;
+            padding: 10px 0;
+            margin: 10px;
+            transition-duration: 0.5s; /*마우스 올렸을 때 천천히 변하고 싶다. 근데 두 군데 다 설정*/
+            background-color: white;
+            opacity: 0.5;   /*투명도*/
+            /* 바뀌는 값이 수치로 나타날 수 있는 값이어야 함.*/
+        }
+        div.item:hover {
+            width: 160px;   /*마우스를 올렸을 때만 커지게 하고 싶다.*/
+            height: 160px;  /*마우스를 올렸을 때만 커지게 하고 싶다.*/
+            transition-duration: 0.5s; /*마우스 뗐을 때 다시 돌아오게 하는 시간. 근데 두 군데 다 설정*/
+            background-color: rgb(247, 218, 223);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>flex를 활용한 여러 아이템 나열</h1>
+    <hr>
+
+    <div class="box">
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+        <div class="item">
+            <img src="pubao.jpg" height="100">
+            <p><strong>푸바오</strong></p>
+        </div>
+    </div>
+</body>
+</html>
