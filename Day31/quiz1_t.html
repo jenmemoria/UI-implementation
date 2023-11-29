@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1_t.html</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit; /*기본은 검정색이다.*/
+        }
+        div.root {
+            border: 2px solid black;
+            width: 900px;
+            margin: auto;
+        }
+        div.top {
+            background-color: lightgray;
+            padding: 10px;  /*테두리 안 쪽*/
+        }
+        h1 {
+            width: fit-content;
+            margin: auto;
+            background-color: lightskyblue;
+            color: white;
+            padding: 10px; /*이러면 상하좌우 패딩이 걸린다.*/
+        }
+        div.mid{
+            display: flex;
+        }
+        div.left {
+            /* border: 1px dashed red; */
+            flex: 1;
+        }
+        div.left > ul {
+            background-color: #222;
+            color: white;
+            font-weight: bold;
+            list-style: none;
+            padding-left: 20px;
+        }
+        div.left > ul > li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        div.left > ul > li:hover {
+            background-color: lightskyblue;
+        }
+        div.right {
+            /* border: 1px dashed blue; */
+            padding: 10px;
+            flex: 4;
+        }
+        div.footer > p {
+            border-top: 1px solid #222;
+            width: 90%;
+            margin: 16px auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <a href="#"><h2>Hello</h2></a> 블록요소 안에 inline을 넣을 수 있도록 하자 ! -->
+    <div class="root">
+        <div class="top">
+            <h1><a href="#">LOGO</a></h1>
+        </div>
+        <div class="mid">
+            <div class="left">
+                <ul>
+                    <li>Menu1</li>
+                    <li>Menu2</li>
+                    <li>Menu3</li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>Hellog world</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sunt in fuga ut accusamus nam, a eius deserunt quibusdam ea nostrum id officiis sequi illo autem adipisci vitae labore at?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptas labore magni delectus mollitia neque tempore quod numquam quibusdam! Unde earum repudiandae porro. Doloribus commodi est dicta! Maiores, nihil officia?</p>
+            </div>
+            
+        </div>
+        <div class="bot">
+            <div class="footer">
+                <p>ⓒcopy</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
