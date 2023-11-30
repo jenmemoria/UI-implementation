@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        div.back {
+            background-image: url('danbi.jpg'),
+                              url('짱구.png'),
+                              url('수지.png');
+            background-position: top, center, bottom;
+            background-repeat: repeat-x;
+            background-size: 100px auto;
+            /* opacity: 0.8; */
+            width: 95%;
+        }
+        div.text {
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            opacity: 1;
+            border: 1px solid coral;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>투명한 배경에 또렷한 글자</h1>
+    <hr>
+
+    <div class="back">
+        <div class="text">
+            <marquee direction="up" scrollamount="10">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio esse ipsum dolor delectus voluptate animi autem, repellendus libero expedita nostrum amet incidunt quidem laudantium magnam dolore. Ducimus est eveniet similique!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique obcaecati, cumque aspernatur accusamus cum sequi nisi distinctio odit. Similique nostrum recusandae dignissimos saepe sunt adipisci, explicabo impedit quidem porro officiis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic earum laboriosam laborum cupiditate sapiente libero nisi deserunt beatae eius similique unde suscipit ab, tenetur temporibus saepe in ea modi ducimus.</p>
+        </marquee>
+        </div>
+    </div>
+</body>
+</html>
