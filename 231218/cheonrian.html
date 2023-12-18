@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cheonrian.html</title>
+    <style>
+        /*
+            글자색1: #0499E2
+            글자색2 : #007aff;
+            테두리 : 1px solid #e4e4e4
+            버튼배경: linear-gradient( -45deg, #34bbf0, #0699e2 50%);
+            전체 틀 크기
+            .inner {
+                margin: 0 auto;
+                padding: 0 auto;
+                max-width: 1194px;
+            }
+
+            header : 페이지 상단 내용, nav를 포함하는 경우도 있다.
+            nav    : 사이트 주 메뉴 내비게이터, ul/ol로 메뉴를 구성하는 경우가 많다.
+            section: 특정 주제에 대한 내용을 묶는 태그, div와 크게 차이는 없다
+            artile : section 하위의 상세 내용, 사이트에 따라 section과 article을 바꿔쓰기도 한다.
+            main   : section, article 상위에 묶는 용도로 사용. header/main/footer로 구분한다.
+            footer : 하단 고정 내용
+            aside  : 왼쪽/오른쪽 측면 메뉴. 광고 및 서브 메뉴 내비게이터 사용. fixed를 걸기도 한다.
+        */
+        header  { border: 1px dashed red;}
+        nav     { border: 1px dashed orangered;}
+        section { border: 1px dashed orange;}
+        article  { border: 1px dashed green;}
+        main    { border: 1px dashed skyblue;}
+        footer  { border: 1px dashed blue;}
+        aside   { border: 1px dashed violet;}
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+        h1, h2, h3, h4, h5, h6 { /**/
+            margin: 0;
+        }
+        .inner {
+                margin: 0 auto;
+                padding: 0 57px;
+                max-width: 1194px;
+                border-left: 2px dashed green;
+                border-right: 2px dashed green;
+            }
+        .logo {
+            background-image: url('https://www.chol.com/common/img/main/logo.png');
+            background-repeat: no-repeat;
+            background-position: center left;
+            width: 157px;
+            height: 60px;
+        }
+        .flex {
+            display: flex;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        nav {
+            align-items: center;
+            width: 900px;
+        }
+        nav > ul {
+            display: flex;
+        }
+        nav > ul > li {
+            font-size: 18px;
+            font-weight: bold;
+            width: 60px;
+            text-align: center;
+        }
+        nav > ul:nth-child(2) > li {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        nav + div { /*nav 바로 다음에 있는 div cf) nav안에 있는 div가 아니다.*/
+            display: flex;
+            align-items: center;
+        }
+        .textColor1 {
+            color: #0499E2;
+        }
+        .textColor2 {
+            color: #007aff;
+        }
+        .title {
+            align-items: center;
+        }
+        div.news + div > div.item {
+            background-color: lightskyblue;
+            width: 200px;
+            /* flex: 1; 잘 모르겠으면 이렇게라도 하기 */
+            height: 150px; /*임시로 쓰기*/
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .rel {
+            position: relative;
+        }
+        .left-arrow {
+            left: -40px;
+        }
+        .right-arrow {
+            right: -40px;
+        }
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: #dadada;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        section.login {
+            display: flex;
+            align-items: center;
+            padding: 20px 57px;
+        }
+        span.hello {
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        section.login > button {
+            all : unset;
+            width: fit-content;
+            border: 1px solid #dadada;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 5px;
+            font-size: 18px;
+        }
+        section.login > button.login {
+            background: linear-gradient( -45deg, #34bbf0, #0699e2 50%);
+            color: white;
+            font-weight: bold;
+        }
+        section.login > button:not(.login) {
+            color: #888;
+            font-weight: 100;
+        }
+        div.video {
+            border: 2px dashed rebeccapurple;
+            display: flex;
+        }
+        div.left {
+            border: 2px dashed darkcyan;
+            width: 600px;
+            
+        }
+        div.left > div.item {
+            background-color: lightskyblue;
+            /* flex: 1; 잘 모르겠으면 이렇게라도 하기 */
+            height: 450px; /*임시로 쓰기*/
+            margin: 10px 0;
+            padding: 5px;
+        }
+        div.right{
+            border: 2px dashed darkorchid;
+            width: 600px;
+            margin-right: 0;
+        }
+        div.wi, div.arae {
+            width: 100%;
+        }
+        div.right > div.wi {
+            display: flex;
+            padding: 10px;
+        }
+        div.right > div.wi > div.item {
+            background-color: lightskyblue;
+            /* flex: 1; 잘 모르겠으면 이렇게라도 하기 */
+            width: 350px;
+            height: 200px; /*임시로 쓰기*/
+            margin-right: 10px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        div.right > div.arae {
+            display: flex;
+            padding: 10px;
+        }
+        div.right > div.arae > div.item {
+            background-color: lightskyblue;
+            /* flex: 1; 잘 모르겠으면 이렇게라도 하기 */
+            width: 350px;
+            height: 200px; /*임시로 쓰기*/
+            margin-right: 10px;
+            padding: 10px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header class="">
+        <div class="inner flex">
+            <div class="logo"></div>
+                <nav class="sb">
+                    <ul>
+                        <li class="textColor2"><a href="">메일</a></li>
+                        <li class="textColor2"><a href="">뉴스</a></li>
+                        <li><a href="">게임</a></li>
+                        <li><a href="">운세</a></li>
+                        <li><a href="">인물</a></li>
+                    </ul>
+                    <ul>
+                        <li class="textColor1"><a href="">주소록</a></li>
+                        <li class="textColor1"><a href="">FAX</a></li>
+                        <li class="textColor1"><a href="">SMS</a></li>
+                    </ul>
+                    <div><a href="">서비스 전체 보기<span class="hbg">≡</span></a></div>
+                </nav>
+        </div>
+    </header>
+    <main>
+        <section class="login inner">
+            <span class="hello textColor1">안녕하세요</span>
+            <button class="login">로그인</button>
+            <button>회원가입</button>
+        </section>
+        <section class="inner">
+            <div class="news sb">
+                <div class="title">
+                    뉴스
+                    <a href=""><button>전체 ≡</button></a>
+                </div>
+                <div>더보기</div>
+            </div>
+            <div class="sb rel">
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="left-arrow"><</div>
+                <div class="right-arrow">></div>
+            </div>
+        </section>
+
+        <section class="inner">
+            <h2>당신을 위한 추천 영상</h2>
+        </section>
+        <div class="inner video">
+            <div class="left">
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="sb wi">
+                    <div class="item">
+                        <div class="news-image"></div>
+                        <div class="news-title"></div>
+                        <div class="news-press"></div>
+                    </div>
+                    <div class="item">
+                        <div class="news-image"></div>
+                        <div class="news-title"></div>
+                        <div class="news-press"></div>
+                    </div>
+                </div>
+                <div class="sb arae">
+                    <div class="item">
+                        <div class="news-image"></div>
+                        <div class="news-title"></div>
+                        <div class="news-press"></div>
+                    </div>
+                    <div class="item">
+                        <div class="news-image"></div>
+                        <div class="news-title"></div>
+                        <div class="news-press"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
